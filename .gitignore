@@ -1,0 +1,19 @@
+# Virtual environment
+venv/
+.venv/
+
+# Generated RAG data (rebuilt by pipeline.py + embedder.py)
+data/chroma/
+data/chunks/
+data/hashes.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Env file safety net
+.env
+
+# OS noise
+.DS_Store
