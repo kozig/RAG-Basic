@@ -1,5 +1,5 @@
 ## Simple RAG setup for use with any LLM
-
+Setup
 ``` bash
 git clone https://github.com/kozig/RAG-Basic.git
 python -m venv venv
@@ -30,17 +30,17 @@ Semantic similarity search - encode the query to a vector, then ask ChromaDB for
 
 ## Claude MCP registration
 ``` bash
-# Register — use the absolute path 
+# Register use the absolute path 
 claude mcp add pentest-rag -- python /absolute/path/to/mcp_server.py 
 # Verify it's connected inside Claude Code 
 /mcp
-# User scope — available in ALL Claude Code sessions (any directory)
+# User scope available in ALL Claude Code sessions (any directory)
 claude mcp add pentest-rag --scope user -- python /absolute/path/to/mcp_server.py
 
-# Project scope — only available when inside that specific directory (default)
+# Project scope only available when inside that specific directory (default)
 claude mcp add pentest-rag --scope project -- python /absolute/path/to/mcp_server.py
 
-# Local scope — project-level but gitignored, not shared with teammates
+# Local scope project-level but gitignored, not shared with teammates
 claude mcp add pentest-rag --scope local -- python /absolute/path/to/mcp_server.py
 ```
 
@@ -63,13 +63,13 @@ python embedder.py
 
 ## Dropping in new content
 
-**PDFs** — drop files into `./data/input/pdfs/` and run:
+**PDFs** drop files into `./data/input/pdfs/` and run:
 
 ```bash
 python -m pipeline.run --sources pdf
 ```
 
-**Markdown** — organise by topic subdirectory:
+**Markdown** organise by topic subdirectory:
 
 ``` bash
 data/input/markdown/
