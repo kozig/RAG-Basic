@@ -22,7 +22,7 @@ Vector encoding using `all-MiniLM-L6-v2` instead of keyword matching.
 ### mcp_server.py
 Semantic similarity search - encode the query to a vector, then ask ChromaDB for the top-k stored vectors by cosine similarity. Returns the original text alongside score.
 
-- Over-fetch + filter pattern - the `where` metadata filter is applied after vector retrieval in ChromaDB, over-fetching compensates for results that get filtered out ensuring you get `top_k` results.
+- Over-fetch + filter pattern - The `where` metadata filter is applied after vector retrieval in ChromaDB, over-fetching compensates for results that get filtered out ensuring you get `top_k` results.
 - Lazy singleton initialisation - Both the embedding model and ChromaDB client are initialised once on first tool call and reused for the lifetime of the server process. Avoids reloading model weights on every query.
 - top_k capping - Guards against flooding the LLM context window with too many retrieved chunks, which degrades generation quality.conservatively set to max of 10
 
