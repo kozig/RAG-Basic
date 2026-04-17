@@ -1,5 +1,5 @@
 ## Simple RAG setup for use with any LLM
-Setup
+**Setup**
 ``` bash
 git clone https://github.com/kozig/RAG-Basic.git
 python -m venv venv
